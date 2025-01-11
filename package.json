@@ -1,0 +1,42 @@
+{
+    "name": "@arpadroid/context",
+    "version": "1.0.0",
+    "description": "Provides a global context with global services for other web components, and fallbacks for when the services are not available.",
+    "exports": "./dist/arpadroid-context.js",
+    "module": "./dist/arpadroid-context.js",
+    "browser": "./dist/arpadroid-context.js",
+    "type": "module",
+    "scripts": {
+        "build": "node ./node_modules/@arpadroid/arpadroid/scripts/build-project.mjs --project=context --minify",
+        "prepublish": "npm run build",
+        "test": "node ./node_modules/@arpadroid/arpadroid/scripts/test-project.mjs --project=context --jest --port=6017"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/arpadroid/context.git"
+    },
+    "keywords": [
+        "arpadroid",
+        "global",
+        "services",
+        "context"
+    ],
+    "author": "Andres Vaquero @arpadroid <web.andresvaquero@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/arpadroid/context/issues"
+    },
+    "homepage": "https://github.com/arpadroid/context#readme",
+    "devDependencies": {
+        "@arpadroid/arpadroid": "file:../arpadroid",
+        "@babel/core": "^7.23.9",
+        "@babel/plugin-syntax-import-assertions": "^7.23.3",
+        "@babel/preset-env": "^7.23.9",
+        "babel-jest": "^29.7.0",
+        "babel-loader": "^9.1.3",
+        "dts-bundle-generator": "^9.3.1",
+        "jsdoc-to-markdown": "^8.0.1",
+        "typescript": "^5.4.2"
+    },
+    "peerDependencies": {}
+}
