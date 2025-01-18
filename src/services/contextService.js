@@ -37,6 +37,8 @@ export function setService(key, instance) {
     services.set(key, instance);
 }
 
+const defaultNotifiedServices = {};
+
 /**
  * Retrieves a service from the context. If not registered, falls back to the default service.
  * @param {string} key - Unique key for the service.
@@ -44,7 +46,10 @@ export function setService(key, instance) {
  */
 export function getService(key) {
     if (!services.has(key)) {
-        console.warn(`Service with key '${key}' is not registered. Using default service.`);
+        if (!defaultNotifiedServices[key]) {
+            console.warn(`Service with key '${key}' is not registered. Using default service.`);
+            defaultNotifiedServices[key] = true;
+        }
         return defaultServices[key] || null;
     }
     return services.get(key);
