@@ -5,6 +5,7 @@
     "exports": "./dist/arpadroid-context.js",
     "module": "./dist/arpadroid-context.js",
     "browser": "./dist/arpadroid-context.js",
+    "types": "./dist/@types/types.compiled.d.ts",
     "type": "module",
     "scripts": {
         "build": "node ./node_modules/@arpadroid/arpadroid/scripts/build-project.mjs --project=context --minify",

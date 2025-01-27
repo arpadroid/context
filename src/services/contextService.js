@@ -1,8 +1,17 @@
-!window && (window = {});
+/**
+ * @typedef {import('./contextService.types').RouterInterface} RouterInterface
+ * @typedef {import('./contextService.types').ServicesInterface} ServicesInterface
+ * @typedef {import('../types').ServiceInstanceType} ServiceInstanceType
+ * @typedef {import('../types').ServicesKeyType} ServicesKeyType
+ */
+
+// !window && (window = {});
+/** @type {Map<ServicesKeyType, any>} */
 const services = window.arpadroidContext || new Map();
 window.arpadroidContext = services;
 
 // Default services logic
+/** @type {ServicesInterface} */
 const defaultServices = {
     apiService: {
         fetch: (url, options) => {
@@ -26,8 +35,8 @@ const defaultServices = {
 
 /**
  * Registers a service in the context.
- * @param {string} key - Unique key for the service.
- * @param {any} instance - The service instance.
+ * @param {ServicesKeyType} key - Unique key for the service.
+ * @param {ServiceInstanceType} instance - The service instance.
  */
 export function setService(key, instance) {
     if (services.has(key)) {
@@ -37,12 +46,13 @@ export function setService(key, instance) {
     services.set(key, instance);
 }
 
+/** @type {Record<string, any>} */
 const defaultNotifiedServices = {};
 
 /**
  * Retrieves a service from the context. If not registered, falls back to the default service.
- * @param {string} key - Unique key for the service.
- * @returns {any} - The registered service instance or the default implementation.
+ * @param {ServicesKeyType} key - Unique key for the service.
+ * @returns {ServiceInstanceType} - The registered service instance or the default implementation.
  */
 export function getService(key) {
     if (!services.has(key)) {
