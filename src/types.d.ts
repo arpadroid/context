@@ -1,3 +1,6 @@
-
-export * from './common.types';
-export * from './services/contextService.types';
+export { CallableType, ServiceInstanceType, ServicesKeyType } from './common.types';
+export {
+    //ServicesInterface,
+    ApiInterface,
+    RouterInterface
+} from './services/contextService.types';

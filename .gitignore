@@ -10,3 +10,4 @@ storybook-static/
 src/i18n/
 src/mockData/images/
 .tsbuildinfo
+.types
