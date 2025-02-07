@@ -3,8 +3,6 @@
     "version": "1.0.0",
     "description": "Provides a global context with global services for other web components, and fallbacks for when the services are not available.",
     "exports": "./dist/arpadroid-context.js",
-    "module": "./dist/arpadroid-context.js",
-    "browser": "./dist/arpadroid-context.js",
     "types": "./dist/@types/types.compiled.d.ts",
     "type": "module",
     "scripts": {

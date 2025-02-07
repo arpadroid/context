@@ -11,3 +11,4 @@ src/i18n/
 src/mockData/images/
 .tsbuildinfo
 .types
+tsconfig.tsbuildinfo
