@@ -6,9 +6,9 @@
     "types": "./dist/@types/types.compiled.d.ts",
     "type": "module",
     "scripts": {
-        "build": "node ./node_modules/@arpadroid/arpadroid/scripts/build-project.mjs --project=context --minify",
+        "build": "node ./node_modules/@arpadroid/module/scripts/build-project.mjs --project=context --minify",
         "prepublish": "npm run build",
-        "test": "node ./node_modules/@arpadroid/arpadroid/scripts/test-project.mjs --project=context --jest --port=6017"
+        "test": "node ./node_modules/@arpadroid/module/scripts/test-project.mjs --project=context --jest --port=6017"
     },
     "repository": {
         "type": "git",
@@ -27,7 +27,7 @@
     },
     "homepage": "https://github.com/arpadroid/context#readme",
     "devDependencies": {
-        "@arpadroid/arpadroid": "file:../arpadroid",
+        "@arpadroid/module": "file:../module",
         "@babel/core": "^7.23.9",
         "@babel/plugin-syntax-import-assertions": "^7.23.3",
         "@babel/preset-env": "^7.23.9",
