@@ -1,10 +1,6 @@
-export type ServiceInstanceType = CallableType;
+export type ServiceInstanceType = SettableType;
 
 export type ServicesKeyType = 'router' | 'apiService';
-
-export type CallableType<T = any> = T & {
-    [key: string]: any;
-};
 
 export type SettableType<T = any> = T & {
     [key: string]: any;

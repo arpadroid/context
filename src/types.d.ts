@@ -1,4 +1,4 @@
-export { CallableType, ServiceInstanceType, ServicesKeyType } from './common.types';
+export { ServiceInstanceType, ServicesKeyType } from './common.types';
 export {
     //ServicesInterface,
     ApiInterface,
