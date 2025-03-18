@@ -2,12 +2,12 @@ export type ServiceInstanceType = SettableType;
 
 export type ServicesKeyType = 'router' | 'apiService';
 
-export type SettableType<T = any> = T & {
-    [key: string]: any;
+export type SettableType<T = unknown> = T & {
+    [key: string]: unknown;
 };
 
 declare global {
     interface Window {
-        arpadroidContext: Map<ServicesKeyType, any>;
+        arpadroidContext: Map<ServicesKeyType, SettableType2>;
     }
 }
