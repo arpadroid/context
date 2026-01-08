@@ -1,3 +1,3 @@
 import { getBuild } from '@arpadroid/module';
-const { build = {} } = getBuild('context', 'library') || {};
+const { build = {} } = getBuild('context') || {};
 export default build;
