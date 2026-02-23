@@ -8,6 +8,6 @@ export type SettableType<T = unknown> = T & {
 
 declare global {
     interface Window {
-        arpadroidContext: Map<ServicesKeyType, SettableType2>;
+        arpadroidContext: Map<ServicesKeyType, SettableType>;
     }
 }

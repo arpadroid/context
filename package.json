@@ -2,13 +2,20 @@
     "name": "@arpadroid/context",
     "version": "1.0.0",
     "description": "Provides a global context with global services for other web components, and fallbacks for when the services are not available.",
-    "exports": "./dist/arpadroid-context.js",
+    "exports": {
+        ".": {
+            "types": "./dist/@types/types.compiled.d.ts",
+            "import": "./dist/arpadroid-context.js"
+        }
+    },
     "types": "./dist/@types/types.compiled.d.ts",
     "type": "module",
     "scripts": {
         "build": "arpadroid-build --minify",
         "clean": "arpadroid-clean",
-        "test": "arpadroid-test --jest"
+        "test": "arpadroid-test --jest",
+        "check:types": "arpadroid-check-types",
+        "initialize": "arpadroid-initialize"
     },
     "repository": {
         "type": "git",
