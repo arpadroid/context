@@ -34,8 +34,7 @@
     },
     "homepage": "https://github.com/arpadroid/context#readme",
     "devDependencies": {
-        "@babel/core": "^7.23.9",
-        "@babel/preset-env": "^7.23.9"
+        "@babel/preset-env": "^8.0.2"
     },
     "peerDependencies": {
         "@arpadroid/module": "file:../module"
